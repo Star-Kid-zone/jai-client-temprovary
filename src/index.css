@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import logo-specific styles */
+/* @import './styles/logo.css'; */
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Additional logo utilities */
+@layer utilities {
+  .logo-hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .logo-invert {
+    filter: brightness(0) invert(1);
+  }
+  
+  .logo-responsive {
+    @apply object-contain h-auto w-auto;
+  }
+}
